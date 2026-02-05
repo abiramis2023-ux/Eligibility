@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Election Eligibility</title>
+        <style>
+            body {
+                font-family:Arial , sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Election Eligibility check</h1>
+        <form id="eligibilityForm">
+            <label for="age">Age:</label>
+            <input type="number" id="age"name="age"><br></br>
+            <label for="citizenship">Citizenship>:</label>
+            <select id="citizenship" name="citizenship">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+                </select><br></br>
+            <label for="residency">Residency:</label>
+            <select id="residency" name="residency">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select><br></br>
+            <button type="submit">Check Eligibility</button>
+            <p id="result"></p>
+        </form>
+
+        <script>
+            const form =document.getElementById('eligibilityForm');
+            form.addEventListener('submit',(e) =>{
+                e.preventDefault();
+                const age=parseInt(document.getElementById('age').value);
+                const residency=document.getElementById('residency').value;
+                const result=document.getElementById('result');
+
+                console.log('Age:',age);
+                console.log('Citizenship')
+
+                if(age>=18 && citizenship === 'yes'&& residency === 'yes'){
+                    result.innerText="You are eligible to vote!";
+                    result.style.color='green';
+                }
+                else{
+                    result.innerText="You are not eligible to vote.";
+                    result.style.color='red';
+                }
+            });
+        </script>
+    </body>
+</html
+          
+
