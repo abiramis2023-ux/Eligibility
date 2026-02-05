@@ -4,3 +4,5 @@ Poroject Features:
 1.Checks if user is atleast 18 years old
 2.Verifies citizenship and residency status
 3.Displays eligibility result with a clear message
+Author
+Abirami
